@@ -1,0 +1,189 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #EBEBEB;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Global Desktop */
+.container {
+    min-height: 500px;
+    max-width: 1024px;
+    margin: 0 auto;
+
+    /* Display Flexível */
+    display: flex;
+    flex-wrap: wrap;
+
+    /* Espaço entre os cards */
+    justify-content: space-between;
+
+    /* Espaço entre o menu fixo e o conteúdo */
+    padding-top: 140px;
+}
+
+/* Menu */
+.header-container {
+    background-image: linear-gradient(to bottom right, lightskyblue, rgba(173, 216, 230, 0.95));
+    min-height: 100px;
+    font-size: 0.8rem;
+
+    /* Fixar o Menu */
+    position: fixed;
+    width: 100%;
+}
+
+header {
+    max-width: 1024px;
+    min-height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    background-image: linear-gradient(to bottom right, lightskyblue, rgba(173, 216, 230, 0.95));
+    font-size: 0.8rem;
+    padding: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.col {
+    background-color: lightblue;
+    border-radius: 5px;
+
+    /* Área que o box irá ocupar */
+    width: 30%;
+
+    /* Distância na Parte Inferior */
+    margin-bottom: 40px;
+
+    text-align: center;
+}
+
+.col:hover {
+    background-color: lightskyblue;
+}
+.col p {
+    color: white;
+    font-size: 0.87;
+    padding: 20px;
+    
+    /* Espaçamento Entre as Linhas */
+    line-height: 1.1rem;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+}
+
+.col p::first-line{
+    font-weight: 700;
+}
+
+.mybutton {
+    padding: 10px 25px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 20px;
+}
+
+.mybutton:hover {
+    background-color: lightskyblue;
+}
+
+.negrito {
+    font-weight: 700;
+}
+
+/* Esconder o icon hamburguer de menu */
+.mob-wrapper {
+    display: none;
+}
+
+/* Comando para Esconder o card 10 */
+.hide-desktop-only {
+    display: none;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    /* Quando atingir 768px irá aparecer 2 colunas */
+    .col {
+        width: 45%;
+    }
+    
+    /* Mostra o card 10 */
+    .hide-desktop-only {
+        display: block;
+    }
+
+    .header-container {
+        /* Menu não esta mais fixo */
+        position: relative;
+    }
+
+    .container {
+        /* Espaço entre o menu fixo e o conteúdo */
+        padding-top: 40px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    .logo {
+        padding: 40px;
+    }
+
+    .navbutton {
+        background-color: lightblue;
+        text-align: center;
+        display: block;
+        border-style: solid;
+        border-width: 1px;
+        padding: 15px 30px;
+        margin-left: -90px;
+        
+    }
+
+    /* Mostrar o icon hamburguer de menu */
+    .mob-wrapper {
+        display: block;
+
+        /* Alinha o bloco do menu na página */
+        padding-right: 30px;
+    }
+
+    .mob-nav {
+        display: none;
+        padding: 15px;
+        
+        /* Impede o botão de menu de ser jogado para cima */
+        position: absolute;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 400px) {
+    /* Quando atingir 400px irá aparecer apenas 1 coluna */
+    .col {
+        width: 100%;
+    }
+
+    /* Mostra o card 10 */
+    .hide-mobile {
+        display: none;
+    }
+}
